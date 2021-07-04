@@ -28,9 +28,9 @@ class Controllers:
         self._i2c_bus0=(busio.I2C(board.SCL_1, board.SDA_1))
         print("Initializing ServoKit")
         self._pca_1 = PCA9685(self._i2c_bus0, address=0x40)
-        self._pca_1.frequency = 60
+        self._pca_1.frequency = 50
         self._pca_2 = PCA9685(self._i2c_bus0, address=0x41)
-        self._pca_2.frequency = 60
+        self._pca_2.frequency = 50
 
         self._servos = list()
         for i in range(0, 12):
